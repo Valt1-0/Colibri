@@ -45,6 +45,7 @@
       <!-- Ajoute le menu de Navigation -->
       {% include 'Navigation/navigation.html.twig' %}
 
+
       <!-- ======= Hero Section ======= -->
       <section id="hero" class="d-flex align-items-center">
         <div class="container-fluid" data-aos="fade-up">
@@ -82,44 +83,97 @@
       <!-- End Hero -->
 
       <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-          <div class="container">
+      <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact section-bg">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>
+                Nous Contacter
+              </h2>
+            </div>
+
             <div class="row">
-              <div class="col-lg-6 order-1 order-lg-2"
-                data-aos="zoom-in"
-                data-aos-delay="150">
-                <img src="assets/img/about.jpg" class="img-fluid" alt="" />
+              <div class="col-lg-6">
+                <div class="info-box mb-4">
+                  <i class="bx bx-map"></i>
+                  <h3>
+                    Notre Adresse
+                  </h3>
+                  <p>
+                    All. de Cindais, 14320 Saint-André-sur-Orne
+                  </p>
+                </div>
               </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
-                data-aos="fade-right">
-                <h3>
-                  Qui sommes-nous ?
-                </h3>
-                <p class="fst-italic">
-                  L’équipe de l’agence Colibri regroupe plusieurs experts chacun
-                  dans leur domaine.
-                </p>
-                <ul>
-                  <li>
-                    <i class="bi bi-check-circle"></i> C’est la synergie de ces différentes
-                    compétences qui permet une approche globale de votre projet.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> L’agence Colibri est ainsi
-                    une agence SEO, une agence digitale ou une agence web selon les
-                    compétences mises en oeuvre pour vos projets. Notre approche
-                    multi-domaines nous permet de répondre à vos besoins.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Nous sommes à votre écoute.
-                  </li>
-                </ul>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="info-box mb-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>
+                    Notre Email
+                  </h3>
+                  <p>
+                    contact@example.com
+                  </p>
+                </div>
               </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="info-box mb-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>
+                    Appelez nous
+                  </h3>
+                  <p>
+                    02 58 23 03 33
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {{ form_start(formContact) }}
+
+            <div class="row">
+              <div class="col-lg-6">
+                <iframe class="mb-4 mb-lg-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10444.212677487805!2d-0.3758633230567018!3d49.123625361938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a43f0ae51b167%3A0xaadc0176179db8c2!2sAgence%20Colibri%20-%20Strat%C3%A9gie%20digitale%20%26%20Application%20Web!5e0!3m2!1sfr!2sfr!4v1652107076128!5m2!1sfr!2sfr"
+                  frameborder="0"
+                  style="border:0; width: 100%; height: 384px;"
+                  allowfullscreen></iframe>
+              </div>
+
+              <div class="col-lg-6">
+                <form action=""
+                  method=""
+                  role="form"
+                  class="php-email-form">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                        {{ form_row(formContact.nom,{'attr' : {'class' : 'form-control', 'placeholder' : 'Nom', 'name' : 'name'}}  ) }}
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        {{ form_row(formContact.mail,{'attr' : {'class' : 'form-control', 'placeholder' : 'Adresse Mail', 'name' : 'email'}}  ) }}
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                       {{ form_row(formContact.objet,{'attr' : {'class' : 'form-control', 'placeholder' : 'Objet', 'name' : 'subject'}}  ) }}
+                  </div>
+                  <div class="form-group mt-3">
+                     {{ form_row(formContact.message,{'attr' : {'class' : 'form-control', 'placeholder' : 'Message', 'name' : 'message', 'style': 'height: 220px'}}  ) }}
+                  </div>
+                  <div class="my-3">
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="text-center">
+                      {{ form_row(formContact.send,{'attr' : {'class' : 'form-control' }}  ) }}
+                  </div>
+                </form>
+              </div>
+
+              {{ form_end(formContact) }}
             </div>
           </div>
         </section>
-        <!-- End About Section -->
+        <!-- End Contact Section -->
       </main>
       <!-- End #main -->
     {% endblock %}

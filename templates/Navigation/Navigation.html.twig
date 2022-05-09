@@ -1,8 +1,13 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center justify-content-between">
+      {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+          {{ message }}
+        </div>
+      {% endfor %}
     <h1 class="logo">
-      <a href="{{ path('index') }}">Colibri</a>
+      <a href="{{ path('index') }}"style="border-color:#ff6750">Colibri</a>
     </h1>
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
@@ -10,13 +15,15 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Nous Contacter</a></li>
+        <li><a class="nav-link scrollto" href="{{ path('contact') }}">Nous Contacter</a></li>
         <li><a class="nav-link scrollto" href="#team">S'inscrire</a></li>
         <li><a class="getstarted scrollto" href="#hero">Se Connecter</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
+
     </nav>
     <!-- .navbar -->
   </div>
 </header>
+
 <!-- End Header -->
