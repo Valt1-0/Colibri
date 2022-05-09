@@ -1,19 +1,284 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <title>
+      {% block title %}
+        Colibri - Accueil
+      {% endblock %}
+    </title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    {% block stylesheets %}
+      <!-- Favicons -->
+      <link href="https://www.agence-colibri.com/wp-content/uploads/2021/05/cropped-logo_seul_200_HD-60x60.png"
+        rel="icon" />
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet" />
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet" />
+      <link href="assets/vendor/boxicons/css/boxicons.min.css"
+        rel="stylesheet" />
+      <link href="assets/vendor/glightbox/css/glightbox.min.css"
+        rel="stylesheet" />
+      <link href="assets/vendor/swiper/swiper-bundle.min.css"
+        rel="stylesheet" />
+
+      <!-- Template Main CSS File -->
+      <link href="assets/css/style.css" rel="stylesheet" />
+    {% endblock %}
+  </head>
+
+  <body>
+    <!-- Ajoute le menu de Navigation -->
+    {% include 'Navigation/navigation.html.twig' %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1>
+              Besoin d’un expert du web ?
+            </h1>
+            <h2>
+              Ça tombe bien ! Vous êtes au bon endroit !
+            </h2>
+            <h2>
+              Notre équipe est spécialisée dans plusieurs domaines du web et
+              notre synergie nous permet de vous proposer des optimisations
+              adaptées à votre activité sur internet.
+            </h2>
+            <div>
+              <a href="https://www.agence-colibri.com/que-cherchez-vous/"
+                target="_blank"
+                class="btn-get-started scrollto">
+                Dites-nous tout
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img"
+            data-aos="zoom-in"
+            data-aos-delay="150">
+            <img src="assets/img/hero-img.png"
+              class="img-fluid animated"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2"
+              data-aos="zoom-in"
+              data-aos-delay="150">
+              <img src="assets/img/about.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
+              data-aos="fade-right">
+              <h3>
+                Qui sommes-nous ?
+              </h3>
+              <p class="fst-italic">
+                L’équipe de l’agence Colibri regroupe plusieurs experts chacun
+                dans leur domaine.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> C’est la synergie de ces différentes
+                  compétences qui permet une approche globale de votre projet.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> L’agence Colibri est ainsi une
+                  agence SEO, une agence digitale ou une agence web selon les compétences
+                  mises en oeuvre pour vos projets. Notre approche multi-domaines
+                  nous permet de répondre à vos besoins.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Nous sommes à votre écoute.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>
+              Nous Contacter
+            </h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-map"></i>
+                <h3>
+                  Notre Adresse
+                </h3>
+                <p>
+                  All. de Cindais, 14320 Saint-André-sur-Orne
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-envelope"></i>
+                <h3>
+                  Notre Email
+                </h3>
+                <p>
+                  contact@example.com
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-phone-call"></i>
+                <h3>
+                  Appelez nous
+                </h3>
+                <p>
+                  02 58 23 03 33
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <iframe class="mb-4 mb-lg-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10444.212677487805!2d-0.3758633230567018!3d49.123625361938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a43f0ae51b167%3A0xaadc0176179db8c2!2sAgence%20Colibri%20-%20Strat%C3%A9gie%20digitale%20%26%20Application%20Web!5e0!3m2!1sfr!2sfr!4v1652107076128!5m2!1sfr!2sfr"
+                frameborder="0"
+                style="border:0; width: 100%; height: 384px;"
+                allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-6">
+              <form action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    required />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control"
+                    name="message"
+                    rows="5"
+                    placeholder="Message"
+                    required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">
+                    Chargement ...
+                  </div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Envoyer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="container">
+        <div class="copyright-wrap d-md-flex py-4">
+          <div class="me-md-auto text-center text-md-start">
+            <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/techie-free-skin-bootstrap-3/ -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="https://www.linkedin.com/company/agence-colibri-strat%C3%A9gie-digitale-application-web/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#"
+      class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <div id="preloader"></div>
+
+    {% block javascripts %}
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/purecounter/purecounter.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+    {% endblock %}
+  </body>
 </html>
