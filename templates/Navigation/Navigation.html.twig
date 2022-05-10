@@ -9,15 +9,19 @@
     <h1 class="logo">
       <a href="{{ path('index') }}"style="border-color:#ff6750">Colibri</a>
     </h1>
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-
+    <!-- .navbar -->
     <nav id="navbar" class="navbar">
       <ul>
+      {% if app.user %}
         <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
         <li><a class="nav-link scrollto" href="{{ path('contact') }}">Nous Contacter</a></li>
-        <li><a class="nav-link scrollto" href="#team">S'inscrire</a></li>
-        <li><a class="getstarted scrollto" href="#hero">Se Connecter</a></li>
+        <li><a class="getstarted scrollto" href="{{ path('logout') }}">D&#xE9;connexion</a></li>
+      {% else %}
+        <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+        <li><a class="nav-link scrollto" href="{{ path('contact') }}">Nous Contacter</a></li>
+        <li><a class="nav-link scrollto" href="{{ path('register') }}">S'inscrire</a></li>
+        <li><a class="getstarted scrollto" href="{{ path('login') }}">Se Connecter</a></li>
+      {% endif %}
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
 
@@ -25,5 +29,4 @@
     <!-- .navbar -->
   </div>
 </header>
-
 <!-- End Header -->

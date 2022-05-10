@@ -5,3 +5,16 @@ index:
 contact:
     path: /Contact
     controller: App\Controller\ContactController::addContact
+
+register:
+    path: /Register
+    controller: App\Controller\RegistrationController::register
+
+login:
+    path: /Login
+    controller: App\Controller\LoginController::index
+
+logout:
+    path: /Logout
+    controller: App\Controller\SecurityController::logout
+
