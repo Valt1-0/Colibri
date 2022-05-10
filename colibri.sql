@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 -- Base de données : `colibri`
 --
 
+CREATE DATABASE IF NOT EXISTS `colibri`;
+
 -- --------------------------------------------------------
 
 --
