@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ContactRepository::class)
@@ -19,21 +20,37 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=55)
+     *
+     * @Assert\NotNull
+     * @Assert\Length(min = 1, minMessage = "Votre nom doit comporter au moins 1 caractères")
+     * @Assert\Length(max = 55, maxMessage = "Votre nom doit comporter au plus 55 caractères")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotNull
+     * @Assert\Length(min = 2, minMessage = "Votre mail doit comporter au moins 2 caractères")
+     * @Assert\Length(max = 255, maxMessage = "Votre mail doit comporter au plus 255 caractères")
      */
     private $mail;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotNull
+     * @Assert\Length(min = 2, minMessage = "L'objet de votre message doit comporter au moins 2 caractères")
+     * @Assert\Length(max = 255, maxMessage = "L'objet de votre message doit comporter au plus 255 caractères")
      */
     private $objet;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=1000)
+     *
+     * @Assert\NotNull
+     * @Assert\Length(min = 2, minMessage = "Votre message doit comporter au moins 2 caractères")
+     * @Assert\Length(max = 1000, maxMessage = "Votre message doit comporter au plus 1000 caractères")
      */
     private $message;
 

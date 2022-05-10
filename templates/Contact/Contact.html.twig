@@ -6,7 +6,7 @@
 
     <title>
       {% block title %}
-        Colibri - Accueil
+        Colibri - Contact
       {% endblock %}
     </title>
     <meta content="" name="description" />
@@ -61,6 +61,10 @@
                 Notre équipe est spécialisée dans plusieurs domaines du web et
                 notre synergie nous permet de vous proposer des optimisations
                 adaptées à votre activité sur internet.
+              </h2>
+              <br>
+              <h2>
+              Et concrètement, que souhaitez-vous pour votre business ?
               </h2>
               <div>
                 <a href="https://www.agence-colibri.com/que-cherchez-vous/"
@@ -158,7 +162,7 @@
                        {{ form_row(formContact.objet,{'attr' : {'class' : 'form-control', 'placeholder' : 'Objet', 'name' : 'subject'}}  ) }}
                   </div>
                   <div class="form-group mt-3">
-                     {{ form_row(formContact.message,{'attr' : {'class' : 'form-control', 'placeholder' : 'Message', 'name' : 'message', 'style': 'height: 220px'}}  ) }}
+                     {{ form_row(formContact.message,{'attr' : {'class' : 'form-control', 'placeholder' : 'Message', 'name' : 'message', 'style': 'height: 220px'}} ) }}
                   </div>
                   <div class="my-3">
                     <div class="error-message"></div>

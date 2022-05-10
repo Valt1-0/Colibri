@@ -397,11 +397,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   margin-top: 30px;
   color: #fff;
-  border: 2px solid #fff;
+  background: #ff6750;
+  border: 2px solid #ff6750;
 }
 #hero .btn-get-started:hover {
   background: #fff;
-  color: #5846f9;
+  color: #ff6750;
 }
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
