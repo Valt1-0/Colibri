@@ -54,6 +54,14 @@ class Contact
      */
     private $message;
 
+    /**
+     * @ORM\Column(type="string", length=55)
+     *
+     * @Assert\Length(min = 1, minMessage = "Votre prénom doit comporter au moins 1 caractères")
+     * @Assert\Length(max = 55, maxMessage = "Votre prénom doit comporter au plus 55 caractères")
+     */
+    private $prenom;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +111,18 @@ class Contact
     public function setMessage(string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }

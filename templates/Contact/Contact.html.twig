@@ -155,8 +155,11 @@
                         {{ form_row(formContact.nom,{'attr' : {'class' : 'form-control', 'placeholder' : 'Nom', 'name' : 'name'}}  ) }}
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                        {{ form_row(formContact.mail,{'attr' : {'class' : 'form-control', 'placeholder' : 'Adresse Mail', 'name' : 'email'}}  ) }}
+                        {{ form_row(formContact.prenom,{'attr' : {'class' : 'form-control', 'placeholder' : 'Prénom', 'name' : 'email'}}  ) }}
                     </div>
+                  </div>
+                  <div class="form-group mt-3">
+                       {{ form_row(formContact.mail,{'attr' : {'class' : 'form-control', 'placeholder' : 'Adresse Mail', 'name' : 'subject'}}  ) }}
                   </div>
                   <div class="form-group mt-3">
                        {{ form_row(formContact.objet,{'attr' : {'class' : 'form-control', 'placeholder' : 'Objet', 'name' : 'subject'}}  ) }}
