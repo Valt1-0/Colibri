@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 10 mai 2022 à 15:13
+-- Généré le : mar. 10 mai 2022 à 15:36
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.9
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 -- Base de données : `colibri`
 --
 
-CREATE DATABASE IF NOT EXISTS `colibri`;
-
 -- --------------------------------------------------------
 
 --
@@ -33,6 +31,7 @@ DROP TABLE IF EXISTS `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `objet` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -61,7 +60,8 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20220509162236', '2022-05-09 16:22:43', 234),
 ('DoctrineMigrations\\Version20220510115131', '2022-05-10 11:51:38', 249),
 ('DoctrineMigrations\\Version20220510121807', '2022-05-10 12:18:16', 723),
-('DoctrineMigrations\\Version20220510150009', '2022-05-10 15:00:13', 281);
+('DoctrineMigrations\\Version20220510150009', '2022-05-10 15:00:13', 281),
+('DoctrineMigrations\\Version20220510153440', '2022-05-10 15:34:45', 654);
 
 -- --------------------------------------------------------
 
